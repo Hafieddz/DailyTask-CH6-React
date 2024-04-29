@@ -1,0 +1,46 @@
+import React from "react";
+
+import { Dropdown, Avatar, Navbar } from "flowbite-react";
+
+function Header() {
+  return (
+    <header>
+      <Navbar fluid rounded>
+        <Navbar.Brand href="https://flowbite-react.com">
+          <h1 className="self-center whitespace-nowrap text-2xl font-bold dark:text-white">
+            Binar University
+          </h1>
+        </Navbar.Brand>
+        <div className="flex md:order-2">
+          <Dropdown
+            arrowIcon={false}
+            inline
+            label={
+              <Avatar
+                alt="User settings"
+                img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                rounded
+              />
+            }
+          >
+            <Dropdown.Header>
+              <span className="block text-sm">John Doe</span>
+              <span className="block truncate text-sm font-medium">
+                johndoe@mail.com
+              </span>
+            </Dropdown.Header>
+          </Dropdown>
+          <Navbar.Toggle />
+        </div>
+        <Navbar.Collapse>
+          <Navbar.Link href="#" active>
+            Home
+          </Navbar.Link>
+          <Navbar.Link href="#">About</Navbar.Link>
+        </Navbar.Collapse>
+      </Navbar>
+    </header>
+  );
+}
+
+export default Header;

@@ -1,0 +1,149 @@
+[
+  {
+    "_id": "662d37b863cf422b5d17eef8",
+    "name": "Hafiedz Hasmy Hamid",
+    "age": 20,
+    "email": "hasmy41@gmail.com",
+    "city": "Makassar"
+  },
+  {
+    "_id": "61db2cbb30d4e060f2d7d5f1",
+    "name": "John Doe",
+    "age": 16,
+    "email": "john@example.com",
+    "city": "New York"
+  },
+  {
+    "_id": "61db2cc430d4e060f2d7d5f2",
+    "name": "Jane Smith",
+    "age": 17,
+    "email": "jane@example.com",
+    "city": "Los Angeles"
+  },
+  {
+    "_id": "61db2cc930d4e060f2d7d5f3",
+    "name": "Alice Johnson",
+    "age": 18,
+    "email": "alice@example.com",
+    "city": "Chicago"
+  },
+  {
+    "_id": "61db2ccf30d4e060f2d7d5f4",
+    "name": "Bob Brown",
+    "age": 16,
+    "email": "bob@example.com",
+    "city": "Houston"
+  },
+  {
+    "_id": "61db2cd430d4e060f2d7d5f5",
+    "name": "Emily Davis",
+    "age": 17,
+    "email": "emily@example.com",
+    "city": "Miami"
+  },
+  {
+    "_id": "61db2cd930d4e060f2d7d5f6",
+    "name": "Michael Wilson",
+    "age": 18,
+    "email": "michael@example.com",
+    "city": "San Francisco"
+  },
+  {
+    "_id": "61db2cde30d4e060f2d7d5f7",
+    "name": "Sarah Taylor",
+    "age": 16,
+    "email": "sarah@example.com",
+    "city": "Seattle"
+  },
+  {
+    "_id": "61db2ce330d4e060f2d7d5f8",
+    "name": "David Martinez",
+    "age": 17,
+    "email": "david@example.com",
+    "city": "Dallas"
+  },
+  {
+    "_id": "61db2cea30d4e060f2d7d5f9",
+    "name": "Jessica Brown",
+    "age": 18,
+    "email": "jessica@example.com",
+    "city": "Boston"
+  },
+  {
+    "_id": "61db2cf230d4e060f2d7d5fa",
+    "name": "Christopher Garcia",
+    "age": 16,
+    "email": "christopher@example.com",
+    "city": "Phoenix"
+  },
+  {
+    "_id": "61db2cf830d4e060f2d7d5fb",
+    "name": "Amanda Martinez",
+    "age": 17,
+    "email": "amanda@example.com",
+    "city": "Austin"
+  },
+  {
+    "_id": "61db2cfe30d4e060f2d7d5fc",
+    "name": "Daniel Wilson",
+    "age": 18,
+    "email": "daniel@example.com",
+    "city": "Denver"
+  },
+  {
+    "_id": "61db2d0530d4e060f2d7d5fd",
+    "name": "Melissa Johnson",
+    "age": 16,
+    "email": "melissa@example.com",
+    "city": "Philadelphia"
+  },
+  {
+    "_id": "61db2d0b30d4e060f2d7d5fe",
+    "name": "James Anderson",
+    "age": 17,
+    "email": "james@example.com",
+    "city": "Atlanta"
+  },
+  {
+    "_id": "61db2d1130d4e060f2d7d5ff",
+    "name": "Laura Lee",
+    "age": 18,
+    "email": "laura@example.com",
+    "city": "Detroit"
+  },
+  {
+    "_id": "61db2d1730d4e060f2d7d600",
+    "name": "Matthew Harris",
+    "age": 16,
+    "email": "matthew@example.com",
+    "city": "Minneapolis"
+  },
+  {
+    "_id": "61db2d1d30d4e060f2d7d601",
+    "name": "Olivia Martin",
+    "age": 17,
+    "email": "olivia@example.com",
+    "city": "Portland"
+  },
+  {
+    "_id": "61db2d2330d4e060f2d7d602",
+    "name": "Ryan Thompson",
+    "age": 18,
+    "email": "ryan@example.com",
+    "city": "San Diego"
+  },
+  {
+    "_id": "61db2d2930d4e060f2d7d603",
+    "name": "Jennifer Walker",
+    "age": 16,
+    "email": "jennifer@example.com",
+    "city": "Orlando"
+  },
+  {
+    "_id": "61db2d2f30d4e060f2d7d604",
+    "name": "Kevin Rodriguez",
+    "age": 17,
+    "email": "kevin@example.com",
+    "city": "Charlotte"
+  }
+]
