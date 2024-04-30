@@ -1,32 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Button, Table } from "flowbite-react";
 import { Spinner } from "flowbite-react";
-import UpdateModal from "./UpdateModal";
-import DeleteModal from "./DeleteModal";
 
-function StudentTable({ students, isLoading }) {
-  const [currentStudent, setCurrentStudent] = useState({});
-  const [updateModal, setUpdateModal] = useState(false);
-  const [deleteModal, setDeleteModal] = useState(false);
-
-  function handleUpdate(student) {
-    setCurrentStudent(student);
-    setUpdateModal(true);
-  }
-
-  function handleDelete(student) {
-    setCurrentStudent(student);
-    setDeleteModal(true);
-  }
-
-  function handleCloseModal() {
-    if (updateModal) {
-      setUpdateModal(false);
-      setCurrentStudent({});
-    } else {
-      setDeleteModal(false);
-      setCurrentStudent({});
-    }
+function StudentTable({ students, isLoading, sendData }) {
+  function handleData(data) {
+    sendData(data);
   }
 
   return (
@@ -62,14 +40,18 @@ function StudentTable({ students, isLoading }) {
                     <Button
                       className="px-1"
                       color="success"
-                      onClick={() => handleUpdate({ ...student })}
+                      onClick={() =>
+                        handleData({ ...student, options: "update" })
+                      }
                     >
                       Edit
                     </Button>
                     <Button
                       className="px-1"
                       color="failure"
-                      onClick={() => handleDelete({ ...student })}
+                      onClick={() =>
+                        handleData({ ...student, options: "delete" })
+                      }
                     >
                       Delete
                     </Button>
@@ -80,19 +62,6 @@ function StudentTable({ students, isLoading }) {
           </Table>
         </div>
       )}
-
-      <UpdateModal
-        isOpen={updateModal}
-        onClose={handleCloseModal}
-        title="Update student data"
-        data={currentStudent}
-      />
-
-      <DeleteModal
-        isOpen={deleteModal}
-        onClose={handleCloseModal}
-        data={currentStudent}
-      />
     </>
   );
 }
