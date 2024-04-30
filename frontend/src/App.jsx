@@ -2,10 +2,24 @@ import React, { useEffect, useState } from "react";
 import Student from "./components/Student";
 import Header from "./components/Header";
 import { Button } from "flowbite-react";
-import AddModal from "./components/AddModal";
+import DeleteModal from "./components/DeleteModal";
+import FormModal from "./components/FormModal";
 
 function App() {
-  const [isAddModal, setIsAddModal] = useState(false);
+  const [currentStudent, setCurrentStudent] = useState({});
+  const [showUpdateModal, setShowUpdateModal] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [showAddModal, setShowAddModal] = useState(false);
+
+  function getData(data) {
+    setCurrentStudent(data);
+    if (data.options === "delete") {
+      setShowDeleteModal(true);
+    } else {
+      setShowUpdateModal(true);
+    }
+  }
+
   return (
     <>
       <Header />
@@ -17,13 +31,34 @@ function App() {
           <Button
             color="blue"
             className="px-5"
-            onClick={() => setIsAddModal(true)}
+            onClick={() => setShowAddModal(true)}
           >
             Add Student
           </Button>
         </div>
-        <Student />
-        <AddModal isOpen={isAddModal} onClose={() => setIsAddModal(false)} />
+        <Student sendData={getData} />
+        <FormModal
+          data={currentStudent}
+          isOpen={showUpdateModal}
+          onClose={() => {
+            setShowUpdateModal(false);
+            setCurrentStudent({});
+          }}
+          title="Update Student Data"
+        />
+        <DeleteModal
+          data={currentStudent}
+          isOpen={showDeleteModal}
+          onClose={() => {
+            setShowDeleteModal(false);
+            setCurrentStudent({});
+          }}
+        />
+        <FormModal
+          isOpen={showAddModal}
+          onClose={() => setShowAddModal(false)}
+          title="Add student data"
+        />
       </main>
     </>
   );
