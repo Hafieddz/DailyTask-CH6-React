@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import StudentTable from "./StudentTable";
-import Modals from "./DeleteModal";
 
-function Student() {
+function Student({sendData}) {
   const [students, setStudents] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState();
 
   useEffect(() => {
     async function fetchStudents() {
@@ -14,15 +14,27 @@ function Student() {
         const result = await response.json();
         setStudents(result.data);
       } catch (error) {
-        console.log(error.message);
+        setErrorMsg("Failed to fetch data!");
       }
       setIsLoading(false);
     }
     fetchStudents();
   }, []);
+
+  function handleData(data) {
+    sendData(data);
+  }
+
   return (
     <>
-      <StudentTable students={students} isLoading={isLoading} />
+      {errorMsg && (
+        <h2 className="text-xl font-bold flex justify-center"> {errorMsg} </h2>
+      )}
+      <StudentTable
+        students={students}
+        isLoading={isLoading}
+        sendData={handleData}
+      />
     </>
   );
 }
